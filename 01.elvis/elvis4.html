@@ -17,6 +17,12 @@
         function hide() {   // <img>에 이미지 제거하기
             document.getElementById("fig").src= "";
         }
+        function n_show() {   // <img>에 이미지 연결하기
+            document.getElementById("n_fig").src = "LoveMeTender.jpg";
+        }
+        function n_hide() {   // <img>에 이미지 제거하기
+            document.getElementById("n_fig").src= "";
+        }
     </script>
 </head>
 <body>
@@ -25,6 +31,8 @@
     <div><img id="fig" src=""></div>
     He was an American singer and actor.
     In November 1956, he made his film debut in
-    <span>Love me tender</span>. He is often referred to as "<span>the King of Rock and Roll</span>".
+    <span onmouseover="n_show()" onmouseout="n_hide()">Love me tender</span>.
+    He is often referred to as "<span>the King of Rock and Roll</span>".
+    <div><img id="n_fig" src="" style="width:200px;"></div>
 </body>
 </html>
