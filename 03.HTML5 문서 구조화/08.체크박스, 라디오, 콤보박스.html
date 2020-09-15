@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스, 라디오버튼 만들기</title>
+</head>
+<body>
+    <h3>좋아하는 중화요리</h3>
+    <hr>
+    <form>
+        짜장면 <input type="checkbox" value="1">
+        짬뽕 <input type="checkbox" value="2" checked>
+        탕수육 <input type="checkbox" value="3">
+    </form>
+    <form>
+        <input type="radio" name="china" value="1">
+            짜장면 <img src="media/jajang.png"><br>
+        <input type="radio" name="china" value="2" checked>
+            짬뽕 <img src="media/jjambbong.png"><br>
+        <input type="radio" name="china" value="3">
+            탕수육 <img src="media/tangsuyuk.png"><br>
+    </form>
+    <form>
+        <select name="china">
+            <option value="1">짜장면</option>
+            <option value="2" selected>짬뽕</option>
+            <option value="3">탕수육</option>
+            </select>
+        </select><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
