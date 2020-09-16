@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 효과 주기</title>
+    <style>
+        @keyframes textColorAnimation {
+            0% {color: blue;}
+            30% {color: green;}
+            100% {color: red;}
+        }
+        span {
+            animation-name: textColorAnimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes textSizeAnimation {
+            from {font-size: 100%;}
+            to {font-size: 500%;}
+        }
+        h3 {
+            animation-name: textSizeAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        div {
+            transition: font-size 5s;
+        }
+        div:hover {
+            font-size: 500%;
+        }
+    </style>
+</head>
+<body>
+    <p><span>span</span>텍스트를 5초에 blue, green, red로 무한 반복합니다.</p>
+    <hr>
+    <div>
+        마우스를 올려보세요
+    </div>
+    <hr>
+    <h3>
+        꽝!!!
+    </h3>
+</body>
+</html>
