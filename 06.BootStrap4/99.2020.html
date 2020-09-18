@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -28,34 +29,41 @@
     </ul>
     <div class="navbar-text fixed-right">
       홍길동님 반갑습니다.&nbsp;&nbsp;&nbsp;
-      날씨 : 맑음, 온도: 20&deg;C
+      현재 날씨 (<i class="fas fa-cloud"></i>)
     </div>
   </nav>
   <nav class="navbar navbar-expand-sm bg-light justify-content-center fixed-bottom">
     <a class="navbar-text">Copyright © 2020 Hoseo Institute of Big Data</a>
   </nav>
 
-  <div class="container-fluid" style="margin-top: 50px;">
+  <div class="container" style="margin-top: 50px;">
     <div class="row">
       <div class="col-2">
-        <div class="btn-group-vertical">
-          <button type="button" class="btn btn-outline-primary" onclick="location.href='95.역사.html'">역사</button>
-          <button type="button" class="btn btn-outline-primary" onclick="location.href='96.안드로이드.html'">안드로이드</button>
-          <button type="button" class="btn btn-outline-primary" onclick="location.href='97.아이폰.html'">아이폰</button>
-          <button type="button" class="btn btn-outline-primary" onclick="location.href='98.샘플.html'">샘플</button>
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-primary dropdown-toggle active" data-toggle="dropdown">
-              2020년 스마트폰</button>
+        <ul class="nav flex-column nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="95.역사.html">역사</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="96.안드로이드.html">안드로이드</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="97.아이폰.html">아이폰</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="98.샘플.html">샘플</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">2020년 스마트폰</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="99.2020.html">갤럭시</a>
-              <a class="dropdown-item" href="99.2020.html">샤오미 mi10</a>
-              <a class="dropdown-item" href="99.2020.html">아이폰 SE2</a>
-              <a class="dropdown-item" href="99.2020.html">LG 벨벳</a>
+              <a class="dropdown-item" href="#">갤럭시</a>
+              <a class="dropdown-item" href="#">샤오미 mi10</a>
+              <a class="dropdown-item" href="#">아이폰 SE2</a>
+              <a class="dropdown-item" href="#">LG 벨벳</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
-      <div class="col-9">
+      <div class="col-10">
           <h3><strong>2020년 신형 스마트폰</strong></h3>
           <br>
           <table class="table" style="text-align: center;  vertical-align: middle;">
@@ -77,13 +85,13 @@
               <tr>
                 <td><strong>사진</strong></td>
                 <td>
-                  <img id="갤럭시" src="img/galaxyS20.jpg" alt="휴대폰 이미지" style="width: 200px"></td>
+                  <img id="갤럭시" src="img/galaxyS20.jpg" alt="휴대폰 이미지" style="width: 150px"></td>
                 <td>
-                  <img id="샤오미" src="img/xiaomi10.jpg" alt="휴대폰 이미지" style="width: 200px"></td>
+                  <img id="샤오미" src="img/xiaomi10.jpg" alt="휴대폰 이미지" style="width: 150px"></td>
                 <td>
-                  <img id="아이폰사진" src="img/iphoneSE2.jpg" alt="휴대폰 이미지" style="width: 200px"></td>
+                  <img id="아이폰사진" src="img/iphoneSE2.jpg" alt="휴대폰 이미지" style="width: 150px"></td>
                 <td>
-                  <img id="LG" src="img/lgvelvet.png" alt="휴대폰 이미지" style="width: 200px;"></td>
+                  <img id="LG" src="img/lgvelvet.png" alt="휴대폰 이미지" style="width: 150px;"></td>
               </tr>
             </tbody>
           </table>
