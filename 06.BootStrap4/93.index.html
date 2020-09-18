@@ -48,20 +48,26 @@
         </a>
     </div>
     </div>
-
+    
     <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
-        <form action="/action_page.php" method="POST">
-            <div class="form-group">
-                <label for="ID"><h5><strong>회원 ID : </strong></h5></label>
-                <input type="text" class="form-control" id="ID" placeholder="ID를 입력해주세요" name="아이디" required>
+        <div class="row">
+            <div class="col-6" style="float: none; margin: 0 auto;">
+                <form action="/action_page.php" method="POST">
+                    <div class="form-group">
+                        <label for="ID">회원 ID :</label>
+                        <input type="text" class="form-control" id="ID" placeholder="ID를 입력해주세요" name="아이디" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">패스워드 :</label>
+                        <input type="password" class="form-control" id="pass" placeholder="비밀번호를 입력해주세요" name="패스워드" required>
+                    </div>
+                </form>
+                <div style="margin-top: 20px; text-align: center;">
+                    <button type="button" class="btn btn-success" onclick="location.href='94.메인페이지.html'">확인</button>
+                    <button type="button" class="btn btn-secondary">취소</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="pass"><h5><strong>패스워드 :</strong></h5></label>
-                <input type="password" class="form-control" id="pass" placeholder="비밀번호를 입력해주세요" name="패스워드" required>
-            </div>
-            <button type="button" class="btn btn-success" onclick="location.href='94.확인.html'">확인</button>
-            <button type="button" class="btn btn-danger">취소</button>
-        </form>
+        </div>
     </div>
 </body>
 
