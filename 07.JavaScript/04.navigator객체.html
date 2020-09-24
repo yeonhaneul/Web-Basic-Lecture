@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator 객체 속성</title>
+    <script>
+        let output = `
+            appCodeName: ${navigator.appCodeName}
+            appName: ${navigator.appName}
+            appName: ${navigator.appName}
+            appVersoin: ${navigator.appVersion}
+            platform: ${navigator.platform}
+            userAgent: ${navigator.userAgent}
+        `;
+
+        console.log(output);
+
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
+            alert('크롬 브라우저');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

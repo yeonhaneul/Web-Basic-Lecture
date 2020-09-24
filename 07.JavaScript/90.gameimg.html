@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갬블링 게임(숫자 이미지로)</title>
+    <script>
+        let openCount = 0;
+        let numbers = [];
+        let gameMoney = 10000;
+        let numCount = 0;
+
+        function changeNum(id) {
+            let imgDOM = document.getElementById(id);
+            let random = Math.floor(Math.random() * 3);
+            imgDOM.src = `img/number_${random}.png`;
+            openCount++;
+            numbers.push(random);
+            if (openCount === 3) {
+                setTimeout(function() {
+                    playGame();
+                }, 3000);
+            }    
+        }
+
+        function playGame() {
+            if (numbers[0] === numbers[1] && numbers[0] === numbers[2])
+                gameMoney += 8000;
+            else
+                gameMoney -= 1000;
+            
+            if (gameMoney === 0) {
+                alert('게임이 종료되었습니다.');
+                gameMoney = 10000;
+                numCount = 0;
+            } else {
+                numCount++
+            }
+            
+            // 화면을 변경
+            let moneyDOM = document.getElementById('money');
+            let countDOM = document.getElementById('count');
+            let firstDOM = document.getElementById('first');
+            let secondDOM = document.getElementById('second');
+            let thirdDOM = document.getElementById('third');
+            moneyDOM.innerHTML = gameMoney;
+            countDOM.innerHTML = numCount;
+            firstDOM.src = "img/question.png";
+            secondDOM.src = "img/question.png";
+            thirdDOM.src = "img/question.png";
+            openCount = 0;
+            numbers = [];
+        }
+    </script>
+</head>
+<body>
+    <h3>겜블링 게임</h3>
+    <hr>
+    <p>게임 머니: <span id="money">10000</span>원
+       횟수: <span id="count">0</span>회</p><br>
+    <img id=first onclick="changeNum('first')" src="img/question.png" width="50px">
+    <img id=second onclick="changeNum('second')" src="img/question.png" width="50px">
+    <img id=third onclick="changeNum('third')" src="img/question.png" width="50px">
+</body>
+</html>
